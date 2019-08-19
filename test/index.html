@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bejson</title>
+</head>
+<script src="../src/bejson.js"></script>
+<!--<script src="../dist/bejson.min.js"></script>-->
+<body>
+<textarea name="old_json" id="old_json" cols="100" rows="10"></textarea>
+<br/>
+<button id="bejson">Bejson</button>
+<br/>
+<textarea name="json" id="json" cols="100" rows="10"></textarea>
+<script>
+    document.getElementById('bejson').addEventListener('click', function (){
+        var old_json = document.getElementById('old_json').value;
+        // var json = bejson(old_json, {debug:true,newlineAfterColonIfBeforeBraceOrBracket:false,spaceAfterColon: false});
+        var json = bejson(old_json, {debug:true});
+        if (json !== false){
+            console.log('bejson.');
+            document.getElementById('json').value = json;
+        }else {
+            document.getElementById('json').value = old_json;
+        }
+        return false;
+    });
+    
+</script>
+</body>
+</html>
