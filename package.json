@@ -1,0 +1,40 @@
+{
+  "name": "bejson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint src/bejson.js && mocha test/bejson.js",
+    "build": "uglifyjs src/bejson.js --compress --mangle --output dist/bejson.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeeinn/bejson"
+  },
+  "keywords": [
+    "json",
+    "bejson",
+    "string",
+    "parser",
+    "format",
+    "pretty"
+  ],
+  "author": "jeeinn",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jshint": "^2.10.2",
+    "mocha": "^6.2.0",
+    "uglify-js": "^3.6.0"
+  },
+  "directories": {
+    "dist": "dist",
+    "src": "src",
+    "test": "test"
+  },
+  "contributors": [
+    "Jeeinn <thinkwei2012@gmail.com>",
+    "雷明nice <https://www.cnblogs.com/lanleiming/p/7096973.html>",
+    "丶SinHtmler <https://www.cnblogs.com/Sinhtml/p/8336930.html>"
+    ]
+}
