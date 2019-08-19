@@ -21,8 +21,8 @@
         if (typeof str == 'string') {
             try {
                 var obj = JSON.parse(str);
-                if (typeof obj != 'object'){
-                    if (debug) console.warn('bejson::JSON.parse fail, it should be object, but get type: '+ typeof obj + '!');
+                if (typeof obj != 'object') {
+                    if (debug) console.warn('bejson::JSON.parse fail, it should be object, but get type: ' + typeof obj + '!');
                     return false;
                 }
                 return !!(typeof obj == 'object' && obj);
